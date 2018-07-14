@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>招贤纳士</title>
+	<link rel="stylesheet" type="text/css" href="css/recruit.css">
+	<script src="jquery-1.11.3.js"></script> 
+</head>
+<body>
+	<div class="nav">
+		<div class="navbox">
+			<div class="navimg"><img src="img/logo.8b3d0f2.png"></div>
+			<ul>
+				<li><a href="index.html" style="margin-left:55px;margin-right: 40px;">首页</a></li>
+				<li><a href="Brand.html">品牌故事</a></li>
+				<li><a href="Product.html">产品展示</a></li>
+				<li><a href="new.html">新闻中心</a></li>
+				<li><a href="recruit.html">招贤纳士</a></li>
+				<li><a href="Contact.html">联系我们</a></li>
+			</ul>
+			<div class="navce">中文 | Engish</div>
+		</div>
+	</div>
+
+	
+	<div class="bannrbox">
+		<div class="bannrimg">
+			<ul class="bannrul">
+				<li><img src="img/bannr01.jpg"></li>
+				<li><img src="img/bannr02.jpg"></li>
+				<li><img src="img/bannr03.jpg"></li>
+				<li><img src="img/bannr04.jpg"></li>
+				<li><img src="img/bannr01.jpg"></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div class="tbox">
+		<div class="triangle2"></div>
+		<div class="leftbox">
+			<img src="img/zxns2.jpg">
+			<div class="update">
+				航丰推崇“德才兼备，以德为本，尚贤用能，绩效优先”的价值主张。对德行的理解，航丰认为诚信、务实、勤奋、胸襟最为重要。对贤能的理解，航丰认为有思想、敢担当、善创新、乐育人最为重要。航丰坚信业绩是人才评鉴的唯一标准，坚持以业绩贡献大小进行人才任用。对于那些不仅能够取得优异的个人业绩，还能够带领团队创造优秀业绩的人才，航丰将推动他们成为航丰的领导者。
+			</div>
+		</div>
+		<div class="rightbox"><img src="img/zxns.jpg"></div>
+		<div class="triangle"></div>
+	</div>
+
+	<div class="bbox">
+		<div class="zbox">
+			<img src="img/zxns3.jpg" style="margin-top: 59px;">
+			<div class="btnbox">
+				<div class="btn">
+					<div class="btn_p">总经理助理<div class="jiantou"></div></div> 
+					<div class="content"><img src="img/content.jpg"></div>
+				</div>
+				<div class="btn">
+					<div class="btn_p">总经理助理<div class="jiantou"></div></div> 
+					<div class="content"><img src="img/content.jpg"></div>
+				</div>
+				<div class="btn">
+					<div class="btn_p">总经理助理<div class="jiantou"></div></div> 
+					<div class="content"><img src="img/content.jpg"></div>
+				</div>
+		
+		</div>	
+	</div>
+	<div class="bottom">
+		<div class="logo">
+		<div class="weixin">
+			<div class="erweima"><img src="img/erweima.jpg">
+				<p>关注微信“公众号”</p>
+			</div>
+			<div class="tiaozi"></div>	
+		</div>
+		<img src="img/weixin.jpg" id="logo1">	
+		</div>
+
+		<div class="btmbox">
+			<div class="btnimg"><img src="img/logo.8b3d0f2.png"></div>
+			<ul>
+				<li style="margin-right: 0px;">首页</li>
+				<li>品牌故事</li>
+				<li>产品展示</li>
+				<li>新闻中心</li>
+				<li>招贤纳士</li>
+				<li>联系我们</li>
+			</ul>
+			<div class="dizhi"><img src="img/ditu.jpg" style="margin-right: 5px;">浙江省杭州市拱墅区祥园路88号智慧信息产业园M座10楼</div>
+				 <div class="btmlx">
+					<div ><img src="img/shafa.jpg">0571-56828945</div>
+					<div><img src="img/xin.jpg">sjx@163.com</div>
+					<div><img src="img/dianhua.jpg">400-125-2366</div>
+				</div>
+					</div>
+					<div class="btm">Copyright © 2016 huishuoit.com 浙ICP备15019987号</div>
+	</div>
+
+	<script>	
+		var btn = $(".btn");
+		btn.click(function(){
+			if($(this).children(".content").css("display")=="none"){
+				$(this).children(".content").css("display","block");
+				$(this).siblings().children(".content").css("display","none");
+				$(this).children(".btn_p").children(".jiantou").css("background-image","url(img/向下箭头.jpg)");
+			}else{
+				$(this).children(".content").css("display","none");
+				$(this).children(".btn_p").children(".jiantou").css("background-image","url(img/向上箭头.jpg)");
+			}
+		})
+
+
+		var wimg = $(".bannrul>li").width();
+		var bannrleft = $(".bannrul").css("left");
+		var ul = $(".bannrul");
+		var img = ul.find("li");
+
+		var t = setInterval(move,2000);
+		var num=0;
+		function move(){				 				
+			if(num<img.length-2){ 
+				num++;	
+				ul.animate({left:-num * wimg + "px"},500);				
+			}else{	
+				num=0;
+				ul.animate({left:-4 * wimg + "px"},500,function(){
+					ul.animate({left:"0px"},0);
+				});		
+			}	
+		}
+		$(".bannrbox").mouseover(function(){
+			clearInterval(t);
+		})
+		$(".bannrbox").mouseout(function(){
+			t = setInterval(move,2000);
+		})
+	</script>
+</body>
+</html>

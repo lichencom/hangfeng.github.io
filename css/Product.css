@@ -1,0 +1,264 @@
+*{
+	margin:0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	font-family: "Microsoft YaHei";
+}
+/* 导航条 */
+.nav{
+  width: 1920px;
+  height: 90px;
+  z-index: 8;
+}
+.navbox{
+	width: 1200px;
+	height: 90px;
+	margin:0 auto;
+
+}
+.navimg{
+	width: 236px;
+	height: 36px;
+	float: left;
+	margin-top: 30px;
+}
+.navbox img{
+	width: 100%;
+	height: 100%;
+}
+.nav ul li a{
+	font-size:16px;
+	color:#000;
+	float: left;
+	margin-right: 45px;
+	height: 37px;
+	margin-top: 36px;
+}
+.nav ul li a:hover{
+	color:#00a0e6;
+	border-bottom: 2px solid #00a0e6;
+}
+.navce{
+	line-height: 90px;
+	font-size: 14px;
+	float: right;
+}
+
+.bannr{
+	width: 1920px;
+	height: 600px;
+}
+.bannr{
+	width: 100%;
+	height: 100%;
+}
+/* 产品展示 */
+.pshow{
+	width: 1200px;
+	margin:0 auto;
+	text-align: center;
+}
+.p1 {
+  font-size: 36px;
+  font-family: "Microsoft YaHei";
+  color: rgb( 51, 51, 51 );
+  text-transform: uppercase;
+  margin-top: 100px;
+}
+.p2 {
+  font-size: 20px;
+  font-family: "Microsoft YaHei";
+  color: rgb( 102, 102, 102 );
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+.p3 {
+  font-size: 16px;
+  font-family: "Microsoft YaHei";
+  color: rgb( 102, 102, 102 );
+  text-transform: uppercase;
+  margin-top: 50px;
+  margin-bottom: 83px;
+}
+
+.list{
+	width: 1200px;
+	height: 345px;
+	margin:0 auto;
+}
+.linebox{
+	height: 305px;
+	width: 277px;
+	float: left;
+	margin-right: 30px;
+}
+.linebox img{
+	width: 100%;
+	height: 250px;
+}
+.linetext{
+	width: 277px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	text-indent: 18px;
+}
+.linetext a{
+	font-size: 16px;
+	color: #00a0e6;
+	float: right;
+	margin-right: 20px;
+	display: none;
+}
+.linebox:hover .linetext a{
+	display: block;	
+}
+.linebox:hover{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.btn{
+	width: 1200px;
+	height: 30px;
+	margin:0 auto;
+	margin-bottom:80px;
+
+}
+.btn div{
+	width: 29px;
+	height: 29px;
+	border: 1px solid #ccc;
+	margin-right: 10px;
+	float: left;
+	line-height: 29px;
+	text-align: center;
+	font-size: 12px;
+	color:#666;
+}
+.btn div:hover{
+	color:#fff;
+	background: #00a0e6;
+	border: 1px solid #00a0e6;
+}
+/*底部*/
+.bottom{
+	width: 1920px;
+	height: 260px;
+	border-top:1px solid #ccc;
+	position: relative;
+}
+.btmbox{
+	width: 1200px;
+	height: 220px;
+	margin:0 auto;
+	position: relative;
+}
+.btnimg{
+	width: 235px;
+	height: 38px;
+	margin-top: 58px;
+	float: left;
+}
+.btnimg img{
+	width: 100%;
+	height: 100%;
+}
+.btmbox ul{
+	width: 600px;
+	height: 25px;
+	float: left;
+	margin-top:70px;
+	margin-left: 95px;
+}
+.btmbox ul li{
+	float: left;
+	margin-right: 40px;
+	color:#999;
+	font-size: 14px;
+	width: 65px;
+	height: 20px;
+}
+.dizhi{
+	width: 380px;
+	height: 20px;
+	font-size: 14px;
+	color: #999;
+	margin-left: 150px;
+	float: left;
+	margin-top:30px;
+}
+.btmlx{
+	width: 550px;
+	height: 30px;
+	float: left;
+	margin-left: 345px;
+	margin-top:20px;
+}
+.btmlx>div{
+	font-size: 14px;
+	color:#999;
+	width: 170px;
+	height: 20px;
+	float: left;
+	border-right: 1px solid #999;
+	text-align: center;
+}
+.btmlx>div>img{
+	margin-top: 3px;
+	margin-right:5px;
+}
+.btm{
+    font-size: 12px;	
+ 	font-family: "Microsoft YaHei";
+ 	color: rgb( 179, 179, 179 );
+  	width: 1200px;
+	height: 39px;
+	border-top: 1px solid #ccc;
+	margin:0 auto;
+	text-align: center;
+	line-height: 39px;
+	
+}
+/* 二维码 */
+.weixin{
+	width: 138px;
+	height: 204px;
+	display: none;
+}
+.erweima{
+	width: 138px;
+	height: 150px;
+	border: 1px solid #7f7f7f;
+	
+}
+.erweima img{
+	margin:9px;
+	margin-bottom: 0;
+}
+.weixin p{
+	font-size: 12px;
+	color:#999;
+	text-align: center;
+}
+.tiaozi{
+	width: 1px;
+	height: 52px;
+	background: #bfbfbf;
+	margin:0 auto;
+}
+.logo{
+	width: 138px;
+	height: 230px;
+	position: absolute;
+	bottom: 164px;
+	right: 400px;
+	z-index: 99;
+}
+#logo1{
+	position: absolute;
+	bottom: 0px;
+	right: 50px;
+}
+.logo:hover .weixin{
+	display: block;
+}

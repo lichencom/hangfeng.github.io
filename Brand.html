@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>品牌故事</title>
+	<script src="jquery-1.11.3.js"></script> 
+	<link rel="stylesheet" type="text/css" href="css/Brand.css">
+</head>
+<body>
+	<div class="nav">
+		<div class="navbox">
+			<div class="navimg"><img src="img/logo.8b3d0f2.png"></div>
+			<ul>
+				<li><a href="index.html" style="margin-left:55px;margin-right: 40px;">首页</a></li>
+				<li><a href="Brand.html">品牌故事</a></li>
+				<li><a href="Product.html">产品展示</a></li>
+				<li><a href="new.html">新闻中心</a></li>
+				<li><a href="recruit.html">招贤纳士</a></li>
+				<li><a href="Contact.html">联系我们</a></li>
+			</ul>
+			<div class="navce">中文 | Engish</div>
+		</div>
+	</div>
+	<div class="bannr"><img src="img/pp.jpg"></div>
+
+	<div class="guanyu">
+		<p class="p1">关于航丰</p>
+		<p class="p2">航丰，航空纺织品领导者</p>
+		<ul class="p3">
+			<li>品牌介绍</li>
+			<li>品牌荣誉</li>
+			<li>合作伙伴</li>
+			<li>企业文化</li>
+			<li style="margin-right: 0;">发展愿景</li>
+		</ul>
+	</div>
+
+	<div class="ppry">
+		<div class="rybox"><img src="img/ppjs.jpg"></div>
+		<div class="rybox"><img src="img/ppry.jpg"></div>
+		<div class="rybox"><img src="img/404.jpg"></div>
+		<div class="rybox"><img src="img/qywh.jpg"></div>
+		<div class="rybox"><img src="img/fzjy.jpg"></div>
+	</div>
+	
+	<div class="bottom">
+		<div class="logo">
+		<div class="weixin">
+			<div class="erweima"><img src="img/erweima.jpg">
+				<p>关注微信“公众号”</p>
+			</div>
+			<div class="tiaozi"></div>	
+		</div>
+		<img src="img/weixin.jpg" id="logo1">	
+	</div>
+
+		<div class="btmbox">
+			<div class="btnimg"><img src="img/logo.8b3d0f2.png"></div>
+			<ul>
+				<li style="margin-right: 0px;">首页</li>
+				<li>品牌故事</li>
+				<li>产品展示</li>
+				<li>新闻中心</li>
+				<li>招贤纳士</li>
+				<li>联系我们</li>
+			</ul>
+			<div class="dizhi"><img src="img/ditu.jpg" style="margin-right: 5px;">浙江省杭州市拱墅区祥园路88号智慧信息产业园M座10楼</div>
+				 <div class="btmlx">
+					<div ><img src="img/shafa.jpg">0571-56828945</div>
+					<div><img src="img/xin.jpg">sjx@163.com</div>
+					<div><img src="img/dianhua.jpg">400-125-2366</div>
+				</div>
+					</div>
+					<div class="btm">Copyright © 2016 huishuoit.com 浙ICP备15019987号</div>
+	</div>
+	<script>
+		var btn = $(".p3>li");
+		var imgs = $(".rybox");
+
+		$(btn[0]).addClass("btnys");
+		$(imgs[0]).addClass("shide");
+		btn.click(function(){
+			$(this).addClass("btnys").siblings().removeClass("btnys");
+			var num = $(this).index();
+			$(imgs[num]).addClass("shide").siblings().removeClass("shide");
+		});
+
+	</script>
+</body>
+</html>

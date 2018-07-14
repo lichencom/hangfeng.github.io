@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<script src="jquery-1.11.3.js"></script> 
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<div class="nav">
+		<div class="navbox">
+			<div class="navimg"><img src="img/logo.8b3d0f2.png"></div>
+			<ul>
+				<li><a href="index.html" style="margin-left:55px;margin-right: 40px;">首页</a></li>
+				<li><a href="Brand.html">品牌故事</a></li>
+				<li><a href="Product.html">产品展示</a></li>
+				<li><a href="new.html">新闻中心</a></li>
+				<li><a href="recruit.html">招贤纳士</a></li>
+				<li><a href="Contact.html">联系我们</a></li>
+			</ul>
+			<div class="navce">中文 | Engish</div>
+		</div>
+	</div>
+
+	<div class="bannrbox">
+		<div class="bannrimg">
+			<ul class="bannrul">
+				<li><img src="img/bannr1.jpg"></li>
+				<li><img src="img/bannr2.jpg"></li>
+				<li><img src="img/bannr3.jpg"></li>
+				<li><img src="img/bannr4.jpg"></li>
+				<li><img src="img/bannr1.jpg"></li>
+			</ul>
+		</div>
+		<div class="bannrbtn">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+
+	<script>
+		var btn = $(".bannrbtn>span");
+		var wimg = $(".bannrul>li").width();
+		
+		$(btn[0]).addClass("current");
+		btn.click(function(){
+			
+			$(this).addClass("current").siblings().removeClass("current");
+			var num = $(this).index();
+			$(".bannrul").animate({left:-num * wimg + "px"},500);
+		});
+		
+		var t = setInterval(move,2000);
+		function move(){
+			var num;		
+			btn.each(function(){ 
+				if($(this).hasClass("current")){			
+					num = $(this).index()+1;
+					$(".bannrul").animate({left:-num * wimg + "px"},500);
+
+					if(num == btn.length){ 
+						$(".bannrul").animate({left:"0px"},0);
+						num=0;
+					}
+				}
+			});
+			$(btn[num]).addClass("current").siblings().removeClass("current");
+		}
+		$(".bannrbox").mouseover(function(){
+			clearInterval(t);
+		})
+		$(".bannrbox").mouseout(function(){
+			t = setInterval(move,2000);
+		})
+		       
+	</script>
+</body>
+</html>
